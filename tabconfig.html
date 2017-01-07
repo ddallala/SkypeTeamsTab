@@ -24,7 +24,7 @@
  
         if (radios[0].checked) {
           microsoftTeams.settings.setSettings({
-            contentUrl: "https://www.github.com",
+            contentUrl: "https://www.google.com/maps/embed",
             suggestedTabName: "Bing Map",
             websiteUrl: "https://www.bing.com/maps",
             removeUrl: "https://ddallala.github.io/SkypeTeamsTab/tabremove.html"
@@ -42,8 +42,6 @@
 );
 
       function onClick() {
-        var url = document.getElementsByName("url");
-        console.debug(url[0].value)
        microsoftTeams.settings.setValidityState(true);
       }
     </script>
