@@ -1,9 +1,24 @@
 <!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. -->
 <!-- See LICENSE in the project root for license information -->
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <body>
-  This is yammer
-  </body>
+<head></head>
+<body>
+<div id="embedded-feed" style="height:800px;width:400px;"></div>
+<script type="text/javascript" src="https://canary.assets-yammer.com/assets/platform_embed.js"></script>
+<script type="text/javascript">
+     /*global yam*/
+     
+     //https://www.yammer.com/microsoft.com/#/threads/inGroup?type=in_group&feedId=4172305
+yam.connect.embedFeed({
+  container: "#embedded-feed",
+  network: "microsoft.com",
+  feedType: "group",
+  feedId: "4172305"
+});
+</script>
+</body>
 </html>
+
+
