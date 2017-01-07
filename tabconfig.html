@@ -6,11 +6,11 @@
   <body>
     <form>
       URL to iFrame: <input type="text" name="url" /><br>
-      Bing Maps: <input type="radio" name="maptype" value="bing" onclick="onClick()">
+      Bing Maps: <input type="radio" name="maptype" value="bing">
       <br>
-      Google Maps: <input type="radio" name="maptype" value="google" onclick="onClick()">
+      Google Maps: <input type="radio" name="maptype" value="google" >
       
-      <button type="button" onclick="onClick('Hello world!')">Click Me!</button>
+      <button type="button" onclick="onClick()">Click Me!</button>
     </form>
 
     <script src="https://statics.teams.microsoft.com/sdk/v0.3/js/MicrosoftTeams.min.js"></script>
@@ -21,7 +21,7 @@
       microsoftTeams.settings.registerOnSaveHandler(function(saveEvent) {
         var radios = document.getElementsByName('maptype');
         var url = document.getElementsByName("url");
-        alert(url)
+ 
         if (radios[0].checked) {
           microsoftTeams.settings.setSettings({
             contentUrl: "https://www.github.com",
@@ -37,7 +37,7 @@
             removeUrl: "https://ddallala.github.io/SkypeTeamsTab/tabremove.html"
           });
         }
-       // saveEvent.notifySuccess();
+        saveEvent.notifySuccess();
       }
 );
 
