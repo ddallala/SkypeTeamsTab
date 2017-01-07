@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
   <body>
+    1
     <form>
       URL to iFrame: <input type="text" name="url" /><br>
       Bing Maps: <input type="radio" name="maptype" value="bing">
@@ -22,21 +23,14 @@
         var radios = document.getElementsByName('maptype');
         var url = document.getElementsByName("url");
  
-        if (radios[0].checked) {
+ 
           microsoftTeams.settings.setSettings({
-            contentUrl: "https://www.google.com/maps/embed",
-            suggestedTabName: "Bing Map",
+            contentUrl: "https://www.yammer.com/microsoft.com/#/threads/inGroup?type=in_group&feedId=4172305",
+            suggestedTabName: "Yammer",
             websiteUrl: "https://www.bing.com/maps",
             removeUrl: "https://ddallala.github.io/SkypeTeamsTab/tabremove.html"
           });
-        } else {
-          microsoftTeams.settings.setSettings({
-            contentUrl: "https://www.google.com/maps/embed",
-            suggestedTabName: "Google Map",
-            websiteUrl: "https://www.google.com/maps",
-            removeUrl: "https://ddallala.github.io/SkypeTeamsTab/tabremove.html"
-          });
-        }
+
         saveEvent.notifySuccess();
       }
 );
