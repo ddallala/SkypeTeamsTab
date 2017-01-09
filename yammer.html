@@ -3,22 +3,47 @@
 
 <!DOCTYPE HTML>
 <html>
-<head></head>
+
+<head>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
 <body>
-<div id="embedded-feed" style="height:800px;width:400px;"></div>
-<script type="text/javascript" src="https://canary.assets-yammer.com/assets/platform_embed.js"></script>
-<script type="text/javascript">
-     /*global yam*/
-     
-     //https://www.yammer.com/microsoft.com/#/threads/inGroup?type=in_group&feedId=4172305
-yam.connect.embedFeed({
-  container: "#embedded-feed",
-  network: "microsoft.com",
-  feedType: "group",
-  feedId: "4172305"
-});
-</script>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row">
+        <div class="col-xs-4" style="height:800px;" id="embedded-feed-1"></div>
+        <div class="col-xs-4" style="height:800px;" id="embedded-feed-2"></div>
+        <div class="col-xs-4" style="height:800px;" id="embedded-feed-3"></div>
+    </div>
+
+
+    <script type="text/javascript" src="https://canary.assets-yammer.com/assets/platform_embed.js"></script>
+    <script type="text/javascript">
+        /*global yam*/
+
+        //https://www.yammer.com/microsoft.com/#/threads/inGroup?type=in_group&feedId=4172305
+        yam.connect.embedFeed({
+            container: "#embedded-feed-1",
+            network: "microsoft.com",
+            feedType: "group",
+            feedId: "4172305"
+        });
+        yam.connect.embedFeed({
+            container: "#embedded-feed-2",
+            network: "microsoft.com",
+            feedType: "group",
+            feedId: "15003"
+        });
+        yam.connect.embedFeed({
+            container: "#embedded-feed-3",
+            network: "microsoft.com",
+            feedType: "group",
+            feedId: "845102"
+        });
+    </script>
 </body>
+
 </html>
-
-
