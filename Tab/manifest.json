@@ -1,9 +1,9 @@
 {
   "$schema": "https://statics.teams.microsoft.com/sdk/v0.2/manifest/MicrosoftTeams.schema.json",
   "manifestVersion": "0.2",
-  "id": "com.example.microsoftteamstabs.maps",
+  "id": "com.danieldallala.microsoftteamstabs.yammer",
   "version": "0.2",
-  "name": "Maps",
+  "name": "D365 Yammer",
   "developer": {
     "name": "Daniel Dallala",   
     "websiteUrl": "http://www.example.com",
@@ -11,8 +11,8 @@
     "termsOfUseUrl": "http://www.example.com/termsofuse"
   },
   "description" : {
-    "short": "Host a map as a tab.",
-    "full": "Host a map as a tab. Select Bing Maps or Google Maps, and click Save."
+    "short": "Useful Yammer feeds from Microsoft.com internal.",
+    "full": "Hosts embedded Yammer feeds that are useful for Dynamics 365 Teams."
   },
   "icons": {
     "44": "maps44.png",
@@ -24,6 +24,8 @@
   "needsIdentity": false,
   "validDomains": [
     "*.bing.com",
-    "*.google.com"
+    "*.google.com",
+    "*.github.io",
+    "*.yammer.com"
   ]
 }
