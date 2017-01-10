@@ -6,12 +6,9 @@
   <body>
     4
     <form>
-      URL to iFrame: <input type="text" name="url" /><br>
-      Bing Maps: <input type="radio" name="maptype" value="bing">
-      <br>
-      Google Maps: <input type="radio" name="maptype" value="google" >
+      Launch Yammer?
       
-      <button type="button" onclick="onClick()">Click Me!</button>
+      <button type="button" onclick="onClick()">Yes!</button>
     </form>
 
     <script src="https://statics.teams.microsoft.com/sdk/v0.3/js/MicrosoftTeams.min.js"></script>
@@ -20,13 +17,10 @@
        /*global microsoftTeams*/
       microsoftTeams.initialize();
       microsoftTeams.settings.registerOnSaveHandler(function(saveEvent) {
-        var radios = document.getElementsByName('maptype');
-        var url = document.getElementsByName("url");
- 
- 
+
           microsoftTeams.settings.setSettings({
             contentUrl: "https://ddallala.github.io/SkypeTeamsTab/yammer.html",
-            suggestedTabName: "Yammer",
+            suggestedTabName: "Yammer for D365",
             websiteUrl: "https://www.bing.com/maps",
             removeUrl: "https://ddallala.github.io/SkypeTeamsTab/tabremove.html"
           });
